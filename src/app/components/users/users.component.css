@@ -1,0 +1,12 @@
+.email{
+  font-size: small;
+  margin-left: 10px;
+  font-style: italic;
+}
+ .odd{
+   background-color: slategrey;
+   color: white;
+ }
+ .even {
+   background-color: burlywood;
+ }

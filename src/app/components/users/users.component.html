@@ -1,0 +1,8 @@
+<rc-user-form (eventEmitter)="updateList($event)" ></rc-user-form>
+<div *ngFor="let user of getUsers(); let i = index; let e=even; let o=odd;"[ngClass]="{odd:o, even:e}">
+  {{user.name}}<span class="email">({{user.email}})</span>
+
+
+
+</div>
+
