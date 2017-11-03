@@ -9,5 +9,11 @@ import {User} from "./models/models";
 })
 export class AppComponent {
   title = 'app';
-
+  users : User[] = [];
+  constructor(public usersService:UsersService) {
+    this.usersService.getUsers().subscribe(users=> this.users =users)
+  }
+  getUsers():User[] {
+    return this.users;
+  }
 }

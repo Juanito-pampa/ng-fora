@@ -6,7 +6,7 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class UsersService {
 
-
+  logged : User
 
   constructor(public http : Http) { }
 

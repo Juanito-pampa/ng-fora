@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+
+  font-family: "Tw Cen MT";
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #D1C4B4;
+  justify-content: center;
+
+}
+
+.title {
+  font-size: 2em;
+  padding: 2%;
+  flex: 1 1 auto;
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttonRadio{
+  flex: 1 1 auto;
+  padding: 2%;
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.user {
+  flex: 2 1 auto;
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.topics {
+  flex: 4 1 auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: auto;
+}
+
+.login{
+  padding: 1%;
+  margin-left: 15%;
+  position: relative;
+
+}
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Topic} from "../../../models/models";
+import {Topic, User} from "../../../models/models";
 import {TopicsService} from "../../../services/topics.service";
+import {UsersService} from "../../../services/users.service";
 
 @Component({
   selector: 'rc-topics',
@@ -9,13 +10,17 @@ import {TopicsService} from "../../../services/topics.service";
 })
 export class TopicsComponent implements OnInit {
 
-  topics : Topic[]=[];
+  topics : Topic []=[];
+  users : User[] = [];
 
-  constructor(public topicsService : TopicsService) { }
+  constructor(public topicsService : TopicsService) {
+
+  }
 
   ngOnInit() {
 
     this.topicsService.getTopics().subscribe(topics=>this.topics=topics)
   }
+
 
 }

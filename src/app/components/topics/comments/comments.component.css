@@ -1,0 +1,16 @@
+.content{
+  font-family: "Tw Cen MT";
+  background-color: darkgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  font-family: "Tw Cen MT";
+  font-size: small;
+  font-style: italic;
+  background-color: darkblue;
+  color: white;
+
+}
+

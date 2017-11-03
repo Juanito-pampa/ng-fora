@@ -22,6 +22,11 @@ export class UserFormComponent implements OnInit {
   }
   createUser(){
     this.copy = {...this.user}
-    this.usersService.createUser(this.user).subscribe(()=>this.eventEmitter.emit(this.copy) )
+    this.usersService.createUser(this.user).subscribe(()=> {
+      this.eventEmitter.emit(this.copy);
+      this.user.name="";
+      this.user.email="";
+    })
+
   }
 }

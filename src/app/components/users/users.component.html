@@ -2,7 +2,10 @@
 <div *ngFor="let user of getUsers(); let i = index; let e=even; let o=odd;"[ngClass]="{odd:o, even:e}">
   {{user.name}}<span class="email">({{user.email}})</span>
 
-
-
 </div>
+<br/>
+<select [(ngModel)]="usersService.logged">
+  <option *ngFor="let user of getUsers()" [ngValue]="user">{{user.name}}</option>
+</select>
 
+logged: {{usersService.logged?.name}}

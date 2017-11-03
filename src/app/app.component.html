@@ -1,11 +1,22 @@
 
+<body>
+<div class="title"> Bienvenue sur le forum de "The Big Bang Théorie"</div>
 
+<div class="buttonRadio">
 <label>Users :
   <input type="radio" name="choixaffichage" [(ngModel)]="state" [value]="'users'">
 </label>
 <label>Topics:
   <input type="radio" name="choixaffichage" [(ngModel)]="state" [value]="'topics'">
 </label>
+</div>
+<div class="login">
+  <select class="form" [(ngModel)]="usersService.logged">
+    <option *ngFor="let user of getUsers()" [ngValue]="user"  [selected]="usersService.logged && usersService.logged.id === user.id">{{user.name}} - {{usersService.logged && usersService.logged.id === user.id}}</option>
+  </select>
+  logged: {{usersService.logged?.name}}
+</div>
+<div class="user"><rc-users *ngIf="state==='users'"></rc-users></div>
+<div class="topics"><rc-topics *ngIf="state==='topics'"></rc-topics></div>
 
-<rc-users *ngIf="state==='users'"></rc-users>
-<rc-topics *ngIf="state==='topics'"></rc-topics>
+</body>

@@ -1,0 +1,6 @@
+<h2>{{topic.title}}</h2>
+<h4>By : {{topic.user.name}}</h4>
+<div *ngFor="let current of topic.comments">
+  <rc-comments [comment]="current"></rc-comments>
+</div>
+<rc-comments-form [topic]=topic (onAdd)="updateListComment($event)"></rc-comments-form>

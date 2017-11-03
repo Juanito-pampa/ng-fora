@@ -6,6 +6,7 @@ export interface User {
   name: string;
   admin?: boolean;
   email: string;
+   statement?: string;
 }
 
 
@@ -14,11 +15,12 @@ export interface Admin extends User {
 }
 
 export interface Comment {
-  id: number;
+  id: number|string;
   content: string;
   user?: User;
   anonymous?: boolean;
   tags?: Array<String>;
+  score?:number;
 }
 
 
